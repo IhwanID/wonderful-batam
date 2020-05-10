@@ -15,6 +15,7 @@ class PlaceTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        photo.roundCorners(with: [.layerMaxXMaxYCorner, .layerMaxXMinYCorner, .layerMinXMaxYCorner, .layerMinXMinYCorner ], radius: 20)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -23,4 +24,12 @@ class PlaceTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+}
+
+extension UIView {
+    
+    func roundCorners(with CACornerMask: CACornerMask, radius: CGFloat) {
+        self.layer.cornerRadius = radius
+        self.layer.maskedCorners = [CACornerMask]
+    }
 }
