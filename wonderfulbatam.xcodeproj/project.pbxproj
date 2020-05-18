@@ -47,6 +47,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6099A78E247314800018DF63 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				60CE27C8245ADD5A007B202B /* Main.storyboard */,
+				60CE27DA245B1844007B202B /* DetailViewController.xib */,
+				60CE27DE245B1D7C007B202B /* PlaceTableViewCell.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		6099A78F247314AC0018DF63 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				60CE27C6245ADD5A007B202B /* ViewController.swift */,
+				60CE27D9245B1844007B202B /* DetailViewController.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
 		60CE27B6245ADD5A007B202B = {
 			isa = PBXGroup;
 			children = (
@@ -66,18 +85,15 @@
 		60CE27C1245ADD5A007B202B /* wonderfulbatam */ = {
 			isa = PBXGroup;
 			children = (
+				6099A78F247314AC0018DF63 /* controller */,
+				6099A78E247314800018DF63 /* view */,
 				60CE27D6245AE7AD007B202B /* model */,
 				60CE27C2245ADD5A007B202B /* AppDelegate.swift */,
 				60CE27C4245ADD5A007B202B /* SceneDelegate.swift */,
-				60CE27C6245ADD5A007B202B /* ViewController.swift */,
-				60CE27C8245ADD5A007B202B /* Main.storyboard */,
 				60CE27CB245ADD5C007B202B /* Assets.xcassets */,
 				60CE27CD245ADD5C007B202B /* LaunchScreen.storyboard */,
 				60CE27D0245ADD5C007B202B /* Info.plist */,
-				60CE27D9245B1844007B202B /* DetailViewController.swift */,
-				60CE27DA245B1844007B202B /* DetailViewController.xib */,
 				60CE27DD245B1D7C007B202B /* PlaceTableViewCell.swift */,
-				60CE27DE245B1D7C007B202B /* PlaceTableViewCell.xib */,
 			);
 			path = wonderfulbatam;
 			sourceTree = "<group>";
