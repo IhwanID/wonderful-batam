@@ -14,7 +14,6 @@ struct Place {
     let description: String
     let latitude: Double
     let longitude: Double
-    
 }
 
 var places: [Place] = [
