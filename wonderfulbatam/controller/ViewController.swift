@@ -14,23 +14,31 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    self.navigationItem.title = "Wonderful Batam"
-       tableView.dataSource = self
+        self.navigationItem.title = "Wonderful Batam"
+        tableView.dataSource = self
         tableView.delegate = self
         
         tableView.register(UINib(nibName: "PlaceTableViewCell", bundle: nil), forCellReuseIdentifier: "PlaceCell")
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "toDetail") {
+            guard let object = sender as? Place else { return }
+            let vc = segue.destination as! DetailViewController
+            vc.place = object
+        }
+    }
 
 }
 
 extension ViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let detail = DetailViewController(nibName: "DetailViewController", bundle: nil)
-        
-        detail.place = places[indexPath.row]
-        
-        self.navigationController?.pushViewController(detail, animated: true)
+//        let detail = DetailViewController(nibName: "DetailViewController", bundle: nil)
+//
+//        detail.place = places[indexPath.row]
+//
+//        self.navigationController?.pushViewController(detail, animated: true)
+       performSegue(withIdentifier: "toDetail", sender: places[indexPath.row])
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }

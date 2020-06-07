@@ -19,9 +19,10 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+       
          if let result = place {
                    photo.image = result.photo
-                   name.text = result.name
+             navigationItem.title = result.name
                    desc.text = result.description
                }
         
