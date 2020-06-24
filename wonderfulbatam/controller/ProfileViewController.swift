@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 private let reuseIdentifier = "SettingsCell"
 
@@ -58,8 +59,6 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
         let view = UIView()
         view.backgroundColor = UIColor(red: 55/255, green: 120/255, blue: 250/255, alpha: 1)
         
-        print("Section is \(section)")
-        
         let title = UILabel()
         title.font = UIFont.boldSystemFont(ofSize: 16)
         title.textColor = .white
@@ -94,7 +93,20 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
         
         switch section {
         case .Social:
-            print(SocialOptions(rawValue: indexPath.row)?.description)
+            var url = ""
+            
+            if(SocialOptions(rawValue: indexPath.row)?.description == "Facebook"){
+                url = "https:facebook.com/ihwan.id"
+            }else if(SocialOptions(rawValue: indexPath.row)?.description == "Instagram"){
+                url = "https://instagram.com/ihwan.id"
+            }else if(SocialOptions(rawValue: indexPath.row)?.description == "Twitter"){
+                url = "https://twitter.com/ihwan_id"
+            }else{
+                url = "https://linkedin.com/in/ihwanid"
+            }
+            let vc = SFSafariViewController(url: URL(string: url)!)
+            present(vc, animated: true)
+            
         }
     }
 }

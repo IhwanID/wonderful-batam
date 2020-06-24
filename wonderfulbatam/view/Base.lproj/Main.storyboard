@@ -32,7 +32,7 @@
                     <navigationItem key="navigationItem" id="hth-Gg-6Fa">
                         <barButtonItem key="rightBarButtonItem" image="person.circle.fill" catalog="system" id="db0-im-F70">
                             <connections>
-                                <segue destination="Ntn-vJ-fuE" kind="show" id="Jfh-Ch-rIH"/>
+                                <segue destination="Ntn-vJ-fuE" kind="show" identifier="toProfil" id="Jfh-Ch-rIH"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -115,7 +115,7 @@
             </objects>
             <point key="canvasLocation" x="885.50724637681162" y="911.38392857142856"/>
         </scene>
-        <!--Profil-->
+        <!--Profile-->
         <scene sceneID="mus-59-YMg">
             <objects>
                 <viewController id="Ntn-vJ-fuE" customClass="ProfileViewController" customModule="wonderfulbatam" customModuleProvider="target" sceneMemberID="viewController">
@@ -137,7 +137,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VrK-z1-Ggd"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Profil" largeTitleDisplayMode="always" id="PJi-0W-QcE">
+                    <navigationItem key="navigationItem" title="Profile" largeTitleDisplayMode="always" id="PJi-0W-QcE">
                         <barButtonItem key="backBarButtonItem" title="Kembali" id="f1T-HO-xOG"/>
                     </navigationItem>
                     <connections>

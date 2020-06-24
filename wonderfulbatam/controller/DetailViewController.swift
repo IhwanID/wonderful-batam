@@ -9,7 +9,7 @@
 import UIKit
 
 class DetailViewController: UIViewController {
-
+    
     @IBOutlet weak var photo: UIImageView!
     @IBOutlet weak var desc: UILabel!
     
@@ -17,14 +17,14 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-       
-         if let result = place {
-                   photo.image = result.photo
-             navigationItem.title = result.name
-                   desc.text = result.description
-               }
+        
+        
+        if let result = place {
+            photo.image = result.photo
+            navigationItem.title = result.name
+            desc.text = result.description
+        }
         
     }
-
+    
 }

@@ -10,15 +10,13 @@ import UIKit
 
 class UserInfoHeader: UIView {
     
-    // MARK: - Properties
-    
     let profileImageView: UIImageView = {
-        let iv = UIImageView()
-        iv.contentMode = .scaleAspectFill
-        iv.clipsToBounds = true
-        iv.translatesAutoresizingMaskIntoConstraints = false
-        iv.image = UIImage(named: "dp")
-        return iv
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.image = UIImage(named: "dp")
+        return imageView
     }()
     
     let usernameLabel: UILabel = {
@@ -37,8 +35,6 @@ class UserInfoHeader: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-    
-    // MARK: - Init
     
     override init(frame: CGRect) {
         super.init(frame: frame)

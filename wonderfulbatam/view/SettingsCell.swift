@@ -10,8 +10,6 @@ import UIKit
 
 class SettingsCell: UITableViewCell {
     
-    // MARK: - Properties
-    
     var sectionType: SectionType? {
         didSet {
             guard let sectionType = sectionType else { return }
@@ -20,14 +18,11 @@ class SettingsCell: UITableViewCell {
         }
     }
     
-    
-    // MARK: - Init
-    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }

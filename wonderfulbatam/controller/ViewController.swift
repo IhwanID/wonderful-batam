@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -28,12 +28,12 @@ class ViewController: UIViewController {
             vc.place = object
         }
     }
-
+    
 }
 
 extension ViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-       performSegue(withIdentifier: "toDetail", sender: places[indexPath.row])
+        performSegue(withIdentifier: "toDetail", sender: places[indexPath.row])
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
@@ -44,13 +44,13 @@ extension ViewController: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-         let cell = tableView.dequeueReusableCell(withIdentifier: "PlaceCell", for: indexPath) as! PlaceTableViewCell
-                   
-               let place = places[indexPath.row]
-               cell.name.text = place.name
-            
-               cell.photo.image = place.photo
-                 
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PlaceCell", for: indexPath) as! PlaceTableViewCell
+        
+        let place = places[indexPath.row]
+        cell.name.text = place.name
+        
+        cell.photo.image = place.photo
+        
         return cell
     }
     
