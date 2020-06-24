@@ -11,7 +11,6 @@ import UIKit
 class DetailViewController: UIViewController {
 
     @IBOutlet weak var photo: UIImageView!
-    @IBOutlet weak var name: UILabel!
     @IBOutlet weak var desc: UILabel!
     
     var place: Place?

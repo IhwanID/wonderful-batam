@@ -45,7 +45,7 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="133.92857142857142"/>
         </scene>
-        <!--Test-->
+        <!--Detail View Controller-->
         <scene sceneID="cnL-hu-Y9j">
             <objects>
                 <viewController id="hol-6j-t6q" customClass="DetailViewController" customModule="wonderfulbatam" customModuleProvider="target" sceneMemberID="viewController">
@@ -103,7 +103,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0jX-gH-gHr"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Test" largeTitleDisplayMode="always" id="cCY-Ws-cOb">
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="cCY-Ws-cOb">
                         <barButtonItem key="backBarButtonItem" title="Kembali" id="vfy-oe-E4d"/>
                     </navigationItem>
                     <connections>
@@ -115,7 +115,7 @@
             </objects>
             <point key="canvasLocation" x="885.50724637681162" y="911.38392857142856"/>
         </scene>
-        <!--Profile View Controller-->
+        <!--Profil-->
         <scene sceneID="mus-59-YMg">
             <objects>
                 <viewController id="Ntn-vJ-fuE" customClass="ProfileViewController" customModule="wonderfulbatam" customModuleProvider="target" sceneMemberID="viewController">
@@ -123,32 +123,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dp" translatesAutoresizingMaskIntoConstraints="NO" id="YjC-5h-vzk">
-                                <rect key="frame" x="107" y="115" width="200" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="32S-AG-ViD"/>
-                                    <constraint firstAttribute="width" constant="200" id="gBX-M9-CmP"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ihwan D" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2QL-Xi-TFe">
-                                <rect key="frame" x="176.5" y="335" width="61" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dmk-w3-FNY">
+                                <rect key="frame" x="0.0" y="140" width="414" height="722"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="YjC-5h-vzk" firstAttribute="centerX" secondItem="ci1-Jd-dOB" secondAttribute="centerX" id="9cM-iJ-3YG"/>
-                            <constraint firstItem="YjC-5h-vzk" firstAttribute="top" secondItem="ci1-Jd-dOB" secondAttribute="top" constant="115" id="Itx-EF-Uz6"/>
-                            <constraint firstItem="2QL-Xi-TFe" firstAttribute="top" secondItem="YjC-5h-vzk" secondAttribute="bottom" constant="20" id="Zub-Hg-eIT"/>
-                            <constraint firstItem="2QL-Xi-TFe" firstAttribute="centerX" secondItem="ci1-Jd-dOB" secondAttribute="centerX" id="oM0-ZI-Bgt"/>
+                            <constraint firstItem="VrK-z1-Ggd" firstAttribute="trailing" secondItem="dmk-w3-FNY" secondAttribute="trailing" id="QYl-R7-nPe"/>
+                            <constraint firstItem="dmk-w3-FNY" firstAttribute="top" secondItem="VrK-z1-Ggd" secondAttribute="top" id="TNc-WN-v4o"/>
+                            <constraint firstItem="VrK-z1-Ggd" firstAttribute="bottom" secondItem="dmk-w3-FNY" secondAttribute="bottom" id="b7Y-cq-Twa"/>
+                            <constraint firstItem="dmk-w3-FNY" firstAttribute="leading" secondItem="VrK-z1-Ggd" secondAttribute="leading" id="ddn-2y-uRb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VrK-z1-Ggd"/>
                     </view>
-                    <navigationItem key="navigationItem" id="PJi-0W-QcE"/>
+                    <navigationItem key="navigationItem" title="Profil" largeTitleDisplayMode="always" id="PJi-0W-QcE">
+                        <barButtonItem key="backBarButtonItem" title="Kembali" id="f1T-HO-xOG"/>
+                    </navigationItem>
                     <connections>
-                        <outlet property="photo" destination="YjC-5h-vzk" id="gl9-Ez-Fz1"/>
+                        <outlet property="tableView" destination="dmk-w3-FNY" id="RgZ-OK-sWg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eqV-jj-GcY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -175,7 +168,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="dp" width="1455" height="1426"/>
         <image name="person.circle.fill" catalog="system" width="128" height="121"/>
     </resources>
 </document>

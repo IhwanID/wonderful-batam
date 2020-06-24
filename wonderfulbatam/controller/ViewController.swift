@@ -33,11 +33,6 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let detail = DetailViewController(nibName: "DetailViewController", bundle: nil)
-//
-//        detail.place = places[indexPath.row]
-//
-//        self.navigationController?.pushViewController(detail, animated: true)
        performSegue(withIdentifier: "toDetail", sender: places[indexPath.row])
         tableView.deselectRow(at: indexPath, animated: true)
     }
